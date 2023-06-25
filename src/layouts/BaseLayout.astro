@@ -1,0 +1,12 @@
+---
+// Top-level await can be used in Astro.
+import '@fontsource/inter';
+import Header from '../components/Header.astro';
+---
+
+<main class="h-screen w-screen cursor-semi">
+  <div class="px-12 py-12">
+    <slot/>
+  </div>
+  <Header />
+</main>

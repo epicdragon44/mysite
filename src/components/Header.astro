@@ -1,0 +1,45 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+	<nav class="w-screen px-12">
+		<div class="flex flex-row justify-between align-middle w-full h-8 py-12 gap-4 border-t-[1px] border-stone-600">
+			<div class="flex flex-row flex-nowrap gap-8">
+				<HeaderLink href="/">Home</HeaderLink>
+				<HeaderLink href="/about">About</HeaderLink>
+				<HeaderLink href="/blog">Thoughts</HeaderLink>
+				<HeaderLink href="/portfolio">Portfolio</HeaderLink>
+				<HeaderLink href="/portfolio">Photography</HeaderLink>
+			</div>
+			<div class="flex flex-row flex-nowrap gap-8">
+				<HeaderLink href="https://1drv.ms/b/s!AnDM_XYwI-BVgfwhtdqN9v86AyVlpQ?e=11TCgj" target="_blank">Resume</HeaderLink>
+				<HeaderLink href="https://www.linkedin.com/in/weidaniel15/" target="_blank">LinkedIn</HeaderLink>
+				<HeaderLink href="https://github.com/epicdragon44" target="_blank">GitHub</HeaderLink>
+				<HeaderLink href="mailto:dlw266@cornell.edu" target="_blank">Email</HeaderLink>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<style>
+	header {
+		position: fixed;
+		bottom: 0;
+		margin: 0em 0 2em;
+	}
+</style>
+
+<script>
+	import anime from 'animejs/lib/anime.es.js';
+
+	anime.timeline({loop: false})
+		.add({
+			targets: 'nav div div a',
+			translateY: [48,0],
+			opacity: [0, 1], // Added this line
+			easing: "easeOutExpo",
+			duration: 1400,
+			delay: (el, i) => 60 * i
+		})
+</script>

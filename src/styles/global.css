@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+:root {
+    --color-white: #f9fbf2;
+    --color-black: #1e1e1e;
+}
+
+@layer base {
+    html {
+        background-color: var(--color-black);
+        color: var(--color-white);
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a {
+        color: var(--color-white);
+        text-decoration: underline;
+        text-decoration-thickness: 0.2px;
+        text-underline-offset: 0.4rem;
+    }
+}
+
+#slide-in-header .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+a:hover {
+    cursor: crosshair;
+}
