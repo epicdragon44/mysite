@@ -20,6 +20,9 @@ dependencies:
   '@fontsource/inter':
     specifier: ^5.0.3
     version: 5.0.3
+  '@swup/slide-theme':
+    specifier: ^1.0.5
+    version: 1.0.5
   '@tailwindcss/typography':
     specifier: ^0.5.9
     version: 0.5.9(tailwindcss@3.3.2)
@@ -38,6 +41,11 @@ dependencies:
   typescript:
     specifier: ^5.1.3
     version: 5.1.3
+
+devDependencies:
+  swup:
+    specifier: ^3.1.1
+    version: 3.1.1
 
 packages:
 
@@ -741,6 +749,16 @@ packages:
       escalade: 3.1.1
     dev: false
 
+  /@swup/slide-theme@1.0.5:
+    resolution: {integrity: sha512-0xxqtURSMDScjLMRdNjtxzo8NGCPcmp6VXrQcxIQzQDSAvwNnP8Zw871C+FSL1EMe8OhAzWAP3E3x9vzH+iLHg==}
+    dependencies:
+      '@swup/theme': 1.0.7
+    dev: false
+
+  /@swup/theme@1.0.7:
+    resolution: {integrity: sha512-OINEaf34fYs90l7/YUUKfOf+paY7/FDhOBLwYxrD0w1OjBiItZpw3N+ATA/QklJwmoUu3KkDFOaQG0zT4KxmmA==}
+    dev: false
+
   /@tailwindcss/typography@0.5.9(tailwindcss@3.3.2):
     resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
     peerDependencies:
@@ -1376,6 +1394,12 @@ packages:
     resolution: {integrity: sha512-N+MeXYoqr3pOgn8xfyRPREN7gHakLYjhsHhWGT3fWAiL4IkAt0iDw14QiiEm2bE30c5XX5q0FtAA3CK5f9/BUg==}
     engines: {node: '>=12'}
     dev: false
+
+  /delegate-it@6.0.1:
+    resolution: {integrity: sha512-ZS2hRm/SaoPzaeWcWyYjzVVF4/PgALZqma9FXsunFt4XQGVAtQ79Vx7v57vNQNaI75Rl12C+x6TkLqHS5PNKLg==}
+    dependencies:
+      typed-query-selector: 2.11.0
+    dev: true
 
   /dequal@2.0.3:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
@@ -2843,6 +2867,11 @@ packages:
       is-wsl: 2.2.0
     dev: false
 
+  /opencollective-postinstall@2.0.3:
+    resolution: {integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==}
+    hasBin: true
+    dev: true
+
   /ora@6.3.1:
     resolution: {integrity: sha512-ERAyNnZOfqM+Ao3RAvIXkYh5joP220yf59gVe2X/cI6SiCxIdi4c9HZKZD8R6q/RDXEje1THBju6iExiSsgJaQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -3556,6 +3585,14 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
+  /swup@3.1.1:
+    resolution: {integrity: sha512-fO8ID/SOYTCl5/Cm45rG3wFBFbrxnjeJ+S9q3eKJL1l3pjl6QUCZNqB4Tid4H0eQXlZv5dNDj4KD3AwWK5Il4w==}
+    requiresBuild: true
+    dependencies:
+      delegate-it: 6.0.1
+      opencollective-postinstall: 2.0.3
+    dev: true
+
   /synckit@0.8.5:
     resolution: {integrity: sha512-L1dapNV6vu2s/4Sputv8xGsCdAVlb5nRDMFU/E27D44l5U6cw1g0dGd45uLc+OXjNMmF4ntiMdCimzcjFKQI8Q==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -3662,6 +3699,10 @@ packages:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
     dev: false
+
+  /typed-query-selector@2.11.0:
+    resolution: {integrity: sha512-qBs4sfmnLlPOyo2oSdvHbIFHe2CPgU54/1UGfSNceb7LARpIEVxUaeRX0Doje6oKpuySS2stqy90R3YrynR8Kg==}
+    dev: true
 
   /typescript@5.1.3:
     resolution: {integrity: sha512-XH627E9vkeqhlZFQuL+UsyAXEnibT0kWR2FWONlr4sTjvxyJYnyefgrkyECLzM5NenmKzRAy2rR/OlYLA1HkZw==}

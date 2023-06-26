@@ -4,9 +4,31 @@ import '@fontsource/inter';
 import Header from '../components/Header.astro';
 ---
 
-<main class="h-screen w-screen cursor-semi">
-  <div class="px-12 py-12">
+<main class="h-screen w-screen cursor-semi bg-neutral-800">
+  <div class="px-12 py-12" id="swup">
     <slot/>
   </div>
   <Header />
 </main>
+
+<script>
+	import anime from 'animejs/lib/anime.es.js';
+
+  anime.timeline({loop: false})
+		.add({
+			targets: '#swup',
+			translateX: [-48,0],
+			opacity: [0, 1], // Added this line
+			easing: "easeOutExpo",
+			duration: 1400,
+			delay: (el, i) => 30 * i
+		})
+
+  // import Swup from "swup";
+  // import SwupSlideTheme from "@swup/slide-theme";
+
+  // const swup = new Swup({
+  //     plugins: [new SwupSlideTheme()],
+  // });
+
+</script>

@@ -6,6 +6,7 @@ module.exports = {
             cursor: {
                 semi: "url(/clickon.png), default",
                 solid: "url(/clickoff.png), pointer",
+                next: "url(/next.png), pointer",
             },
         },
     },
