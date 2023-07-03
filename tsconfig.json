@@ -1,9 +1,0 @@
-{
-    "extends": "astro/tsconfigs/strict",
-    "compilerOptions": {
-        "strictNullChecks": true,
-        "allowJs": true,
-        "noImplicitAny": false
-    },
-    "typeRoots": ["./node_modules/@types/"]
-}
