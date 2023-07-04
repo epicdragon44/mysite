@@ -1,7 +1,5 @@
 import Image from "next/image";
-import { useMemo } from "react";
-import colors from "../consts/colors";
-import styles from "../consts/styles";
+import styles from "../data/styles/styles";
 import CustomLink from "./link";
 
 /**

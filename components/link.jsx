@@ -1,4 +1,4 @@
-import styles from "../consts/styles";
+import styles from "../data/styles/styles";
 import Link from "next/link";
 
 /**

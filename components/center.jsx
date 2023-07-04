@@ -3,15 +3,7 @@ import CustomLink from "./link";
 // TODO: USE INTER EVERYWHERE
 
 const CenterSplash = () => (
-    <div
-        style={{
-            position: "fixed",
-            top: "auto",
-            bottom: "auto",
-            right: "auto",
-            left: "auto",
-        }}
-    >
+    <div>
         <h1
             style={{
                 fontSize: "4rem",

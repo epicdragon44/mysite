@@ -1,4 +1,4 @@
-import colors from "../consts/colors";
+import colors from "./colors";
 
 const bar = {
     display: "flex",

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import works from "../consts/works";
-import colors from "../consts/colors";
+import works from "../data/works";
+import colors from "../data/styles/colors";
 import {
     Archive,
     Search,
@@ -10,7 +10,7 @@ import {
     Layers,
     ArrowRight,
 } from "react-feather";
-import styles from "../consts/styles";
+import styles from "../data/styles/styles";
 
 const {
     spanWithIcon,
