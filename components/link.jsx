@@ -1,4 +1,4 @@
-import useStyles from "../data/styles/styles";
+import useStyles from "../hooks/styles";
 import Link from "next/link";
 
 /**

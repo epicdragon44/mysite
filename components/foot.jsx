@@ -1,4 +1,4 @@
-import useStyles from "../data/styles/styles";
+import useStyles from "../hooks/styles";
 import CustomLink from "./link";
 import { useTheme } from "nextra-theme-blog";
 import Logo from "./logo";

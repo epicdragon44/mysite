@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import pathnames from "../data/consts/routes";
-import useStyles from "../data/styles/styles";
+import pathnames from "../consts/routes";
+import useStyles from "../hooks/styles";
 import CustomLink from "./link";
 import { useTheme } from "nextra-theme-blog";
 import Logo from "./logo";

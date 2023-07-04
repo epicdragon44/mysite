@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import works from "../data/cms/works";
-import useColors from "../data/styles/colors";
+import works from "../cms/works";
+import useColors from "../hooks/colors";
 import {
     Archive,
     Search,
@@ -10,7 +10,7 @@ import {
     Layers,
     ArrowRight,
 } from "react-feather";
-import useStyles from "../data/styles/styles";
+import useStyles from "../hooks/styles";
 
 const Work = ({ work, expanded, onClick }) => {
     const colors = useColors();

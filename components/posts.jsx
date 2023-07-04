@@ -1,5 +1,5 @@
-import posts from "../data/cms/posts";
-import useColors from "../data/styles/colors";
+import posts from "../cms/posts";
+import useColors from "../hooks/colors";
 import { ArrowRight } from "react-feather";
 
 const Posts = () => {
