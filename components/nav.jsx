@@ -1,9 +1,12 @@
+"use client";
+
 import { useMemo } from "react";
 import pathnames from "../consts/routes";
 import useStyles from "../hooks/styles";
 import CustomLink from "./link";
 import { useTheme } from "nextra-theme-blog";
 import Logo from "./logo";
+import { useEffect, useState } from "react";
 
 /**
  * Renders a static navigation bar.
@@ -14,7 +17,17 @@ import Logo from "./logo";
 const navbar = (props) => {
     const { containerStyle, navStyle } = useStyles();
 
-    const { theme } = useTheme();
+    const { theme, setTheme } = useTheme();
+
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => setMounted(true), []);
+
+    useEffect(() => {
+        if (mounted) {
+            setTheme("light");
+        }
+    }, [mounted]);
 
     const links = useMemo(
         () =>
