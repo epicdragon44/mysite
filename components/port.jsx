@@ -117,7 +117,10 @@ const WorkList = ({ works, filter }) => {
                         .includes(filter.search.toLowerCase()) ||
                     work.descr
                         .toLowerCase()
-                        .includes(filter.search.toLowerCase())
+                        .includes(filter.search.toLowerCase()) ||
+                    work.stack.some((tag) =>
+                        tag.toLowerCase().includes(filter.search.toLowerCase())
+                    )
                 );
             }
             return true;
