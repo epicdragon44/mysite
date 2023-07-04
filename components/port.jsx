@@ -1,7 +1,31 @@
 import React, { useState, useEffect } from "react";
 import works from "../consts/works";
 import colors from "../consts/colors";
-import FancyCheckbox from "./check";
+import {
+    Archive,
+    Search,
+    PenTool,
+    Code,
+    BookOpen,
+    Layers,
+    ArrowRight,
+} from "react-feather";
+
+const spanWithIcon = {
+    display: "flex",
+    flexDirection: "row",
+    width: "fit-content",
+    flexWrap: "nowrap",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "6px",
+};
+const flexRow = {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+};
 
 const Work = ({ work, expanded, onClick }) => {
     const container = {
@@ -11,16 +35,11 @@ const Work = ({ work, expanded, onClick }) => {
         fontSize: "15px",
     };
     const linkButton = {
+        ...spanWithIcon,
         color: colors.textSecondary,
         textDecoration: "none",
         marginRight: "0",
-        fontWeight: "600",
-    };
-    const flexRow = {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        flexWrap: "wrap",
+        fontWeight: "500",
     };
     const expandRow = {
         ...flexRow,
@@ -57,27 +76,37 @@ const Work = ({ work, expanded, onClick }) => {
             {expanded && (
                 <div style={expandedDiv}>
                     <div style={flexRow}>
-                        <span>{work.company}</span>
+                        <span style={spanWithIcon}>
+                            <Archive size={16} />
+                            <span>{work.company}</span>
+                        </span>
                         <span>{work.year}</span>
                     </div>
-                    <div>Stack: {work.stack.join(", ")}</div>
-                    <div style={flexRow}>
-                        <span
-                            style={{
-                                fontFamily: "monospace",
-                                fontSize: "14px",
-                                fontWeight: "100",
-                            }}
-                        >
-                            License: {work.license}
+                    <div>
+                        <span style={spanWithIcon}>
+                            <Layers size={16} />
+                            <span>{work.stack.join(", ")}</span>
                         </span>
+                    </div>
+                    <div>
+                        <span style={spanWithIcon}>
+                            <BookOpen size={16} />
+                            <span>{work.license}</span>
+                        </span>
+                    </div>
+                    <div
+                        style={{
+                            ...flexRow,
+                            justifyContent: "flex-end",
+                        }}
+                    >
                         {work.link && (
                             <a
                                 style={linkButton}
                                 href={work.link}
                                 target='_blank'
                             >
-                                Visit Project
+                                Visit Project <ArrowRight size={18} />
                             </a>
                         )}
                     </div>
@@ -140,14 +169,22 @@ const FilterBar = ({ filter, setFilter }) => {
         },
         checkbox: {
             margin: "0 8px",
+            visibility: "hidden",
         },
         labelInactive: {
+            cursor: "pointer",
+            padding: "8px 16px",
+            borderRadius: "64px",
             fontSize: "16px",
             color: colors.textSecondary,
         },
         labelActive: {
+            cursor: "pointer",
+            padding: "8px 16px",
+            borderRadius: "64px",
             fontSize: "16px",
-            color: colors.textPrimary,
+            color: colors.white,
+            backgroundColor: colors.black,
         },
     };
 
@@ -164,15 +201,29 @@ const FilterBar = ({ filter, setFilter }) => {
 
     return (
         <div style={style.container}>
-            <input
-                type='text'
-                placeholder='Search'
-                value={filter.search}
-                onChange={handleSearchChange}
-            />
-            <div>
-                <span style={{ marginRight: "12px" }}>
+            <span
+                style={{
+                    ...spanWithIcon,
+                    gap: "12px",
+                }}
+            >
+                <Search size={20} />
+                <input
+                    type='text'
+                    placeholder='Search'
+                    value={filter.search}
+                    onChange={handleSearchChange}
+                />
+            </span>
+            <div
+                style={{
+                    ...flexRow,
+                    justifyContent: "flex-end",
+                }}
+            >
+                <span style={flexRow}>
                     <input
+                        id='design-check'
                         type='checkbox'
                         value='design'
                         style={style.checkbox}
@@ -180,17 +231,22 @@ const FilterBar = ({ filter, setFilter }) => {
                         onChange={handleTagChange}
                     />
                     <label
+                        for='design-check'
                         style={
                             filter.tags.includes("design")
                                 ? style.labelActive
                                 : style.labelInactive
                         }
                     >
-                        Design
+                        <span style={spanWithIcon}>
+                            <span>Design</span>
+                            <PenTool size={16} />
+                        </span>
                     </label>
                 </span>
-                <span style={{ marginRight: "0px" }}>
+                <span style={flexRow}>
                     <input
+                        id='code-check'
                         type='checkbox'
                         value='code'
                         style={style.checkbox}
@@ -198,13 +254,17 @@ const FilterBar = ({ filter, setFilter }) => {
                         onChange={handleTagChange}
                     />
                     <label
+                        for='code-check'
                         style={
                             filter.tags.includes("code")
                                 ? style.labelActive
                                 : style.labelInactive
                         }
                     >
-                        Code
+                        <span style={spanWithIcon}>
+                            <span>Code</span>
+                            <Code size={16} />
+                        </span>
                     </label>
                 </span>
             </div>
