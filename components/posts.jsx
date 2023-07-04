@@ -15,7 +15,11 @@ const Posts = () => {
                             paddingLeft: "2rem",
                             cursor: "pointer",
                         }}
-                        onClick={() => window.open(post.link, "_blank")}
+                        onClick={() =>
+                            post.link.charAt(0) === "/"
+                                ? window.open(post.link, "_self")
+                                : window.open(post.link, "_blank")
+                        }
                     >
                         <h3
                             style={{
