@@ -1,0 +1,19 @@
+/* Define global color variables: black, darkgrey, lightgrey, textPrimary, textSecondary */
+
+:root {
+    --black: #000000;
+    --darkgrey: #7a7a7a;
+    --lightgrey: #aaaaaa;
+    --textPrimary: #000000;
+    --textSecondary: #606060;
+}
+
+/* Re-style links */
+
+a {
+    color: var(--textSecondary);
+    margin-right: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+}
