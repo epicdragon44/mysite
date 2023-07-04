@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import works from "../data/works";
+import works from "../data/cms/works";
 import colors from "../data/styles/colors";
 import {
     Archive,
