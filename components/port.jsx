@@ -169,7 +169,7 @@ const FilterBar = ({ filter, setFilter }) => {
         },
         checkbox: {
             margin: "0 8px",
-            visibility: "hidden",
+            display: "none",
         },
         labelInactive: {
             cursor: "pointer",
@@ -218,7 +218,7 @@ const FilterBar = ({ filter, setFilter }) => {
             <div
                 style={{
                     ...flexRow,
-                    justifyContent: "flex-end",
+                    gap: "12px",
                 }}
             >
                 <span style={flexRow}>
