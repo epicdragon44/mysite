@@ -10,48 +10,19 @@ import {
     Layers,
     ArrowRight,
 } from "react-feather";
+import styles from "../consts/styles";
 
-const spanWithIcon = {
-    display: "flex",
-    flexDirection: "row",
-    width: "fit-content",
-    flexWrap: "nowrap",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "6px",
-};
-const flexRow = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    flexWrap: "wrap",
-};
+const {
+    spanWithIcon,
+    flexRow,
+    container,
+    linkButton,
+    expandRow,
+    expandedDiv,
+    filterBarStyle,
+} = styles;
 
 const Work = ({ work, expanded, onClick }) => {
-    const container = {
-        margin: "6px",
-        padding: "6px",
-        cursor: "pointer",
-        fontSize: "15px",
-    };
-    const linkButton = {
-        ...spanWithIcon,
-        color: colors.textSecondary,
-        textDecoration: "none",
-        marginRight: "0",
-        fontWeight: "500",
-    };
-    const expandRow = {
-        ...flexRow,
-        padding: "6px",
-        borderTop: "1px solid " + colors.lightgrey,
-    };
-    const expandedDiv = {
-        padding: "8px",
-        color: colors.textSecondary,
-        fontWeight: "300",
-    };
-
     return (
         <div style={container} onClick={onClick}>
             <div style={expandRow}>
@@ -161,33 +132,6 @@ const WorkList = ({ works, filter }) => {
 };
 
 const FilterBar = ({ filter, setFilter }) => {
-    const style = {
-        container: {
-            display: "flex",
-            justifyContent: "space-between",
-            margin: "10px",
-        },
-        checkbox: {
-            margin: "0 8px",
-            display: "none",
-        },
-        labelInactive: {
-            cursor: "pointer",
-            padding: "8px 16px",
-            borderRadius: "64px",
-            fontSize: "16px",
-            color: colors.textSecondary,
-        },
-        labelActive: {
-            cursor: "pointer",
-            padding: "8px 16px",
-            borderRadius: "64px",
-            fontSize: "16px",
-            color: colors.white,
-            backgroundColor: colors.black,
-        },
-    };
-
     const handleSearchChange = (event) => {
         setFilter({ ...filter, search: event.target.value });
     };
@@ -200,7 +144,7 @@ const FilterBar = ({ filter, setFilter }) => {
     };
 
     return (
-        <div style={style.container}>
+        <div style={filterBarStyle.container}>
             <span
                 style={{
                     ...spanWithIcon,
@@ -226,7 +170,7 @@ const FilterBar = ({ filter, setFilter }) => {
                         id='design-check'
                         type='checkbox'
                         value='design'
-                        style={style.checkbox}
+                        style={filterBarStyle.checkbox}
                         checked={filter.tags.includes("design")}
                         onChange={handleTagChange}
                     />
@@ -234,8 +178,8 @@ const FilterBar = ({ filter, setFilter }) => {
                         for='design-check'
                         style={
                             filter.tags.includes("design")
-                                ? style.labelActive
-                                : style.labelInactive
+                                ? filterBarStyle.labelActive
+                                : filterBarStyle.labelInactive
                         }
                     >
                         <span style={spanWithIcon}>
@@ -249,7 +193,7 @@ const FilterBar = ({ filter, setFilter }) => {
                         id='code-check'
                         type='checkbox'
                         value='code'
-                        style={style.checkbox}
+                        style={filterBarStyle.checkbox}
                         checked={filter.tags.includes("code")}
                         onChange={handleTagChange}
                     />
@@ -257,8 +201,8 @@ const FilterBar = ({ filter, setFilter }) => {
                         for='code-check'
                         style={
                             filter.tags.includes("code")
-                                ? style.labelActive
-                                : style.labelInactive
+                                ? filterBarStyle.labelActive
+                                : filterBarStyle.labelInactive
                         }
                     >
                         <span style={spanWithIcon}>
