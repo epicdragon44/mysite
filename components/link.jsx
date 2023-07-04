@@ -1,4 +1,4 @@
-import styles from "../data/styles/styles";
+import useStyles from "../data/styles/styles";
 import Link from "next/link";
 
 /**
@@ -12,7 +12,7 @@ import Link from "next/link";
  * @returns
  */
 const CustomLink = (props) => {
-    const { linkStyle, activeLinkStyle } = styles;
+    const { linkStyle, activeLinkStyle } = useStyles();
 
     const { href, text, black, key, newTab } = props;
 

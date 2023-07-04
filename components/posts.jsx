@@ -1,8 +1,10 @@
 import posts from "../data/cms/posts";
-import colors from "../data/styles/colors";
+import useColors from "../data/styles/colors";
 import { ArrowRight } from "react-feather";
 
 const Posts = () => {
+    const colors = useColors();
+
     return (
         <div>
             {posts.map((post, index) => {

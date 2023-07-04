@@ -7,13 +7,3 @@
     --textPrimary: #000000;
     --textSecondary: #606060;
 }
-
-/* Re-style links */
-
-a {
-    color: var(--textSecondary);
-    margin-right: 1rem;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    text-decoration-thickness: 1px;
-}

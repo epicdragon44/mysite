@@ -1,12 +1,15 @@
-import Image from "next/image";
-import styles from "../data/styles/styles";
+import useStyles from "../data/styles/styles";
 import CustomLink from "./link";
+import { useTheme } from "nextra-theme-blog";
+import Logo from "./logo";
 
 /**
  * Renders a static footer.
  */
 const footbar = () => {
-    const { containerStyle, footStyle } = styles;
+    const { containerStyle, footStyle } = useStyles();
+
+    const { theme } = useTheme();
 
     return (
         <nav style={footStyle}>
@@ -40,11 +43,7 @@ const footbar = () => {
                         marginRight: "-18px",
                     }}
                 >
-                    <Image
-                        src='/logo.svg'
-                        alt='logo'
-                        width={72}
-                        height={24}
+                    <Logo
                         style={{
                             margin: "0",
                             padding: "0",

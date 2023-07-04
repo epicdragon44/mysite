@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import works from "../data/cms/works";
-import colors from "../data/styles/colors";
+import useColors from "../data/styles/colors";
 import {
     Archive,
     Search,
@@ -10,19 +10,21 @@ import {
     Layers,
     ArrowRight,
 } from "react-feather";
-import styles from "../data/styles/styles";
-
-const {
-    spanWithIcon,
-    flexRow,
-    container,
-    linkButton,
-    expandRow,
-    expandedDiv,
-    filterBarStyle,
-} = styles;
+import useStyles from "../data/styles/styles";
 
 const Work = ({ work, expanded, onClick }) => {
+    const colors = useColors();
+
+    const {
+        spanWithIcon,
+        flexRow,
+        container,
+        linkButton,
+        expandRow,
+        expandedDiv,
+        filterBarStyle,
+    } = useStyles();
+
     return (
         <div style={container} onClick={onClick}>
             <div style={expandRow}>
@@ -90,6 +92,16 @@ const Work = ({ work, expanded, onClick }) => {
 const WorkList = ({ works, filter }) => {
     const [expanded, setExpanded] = useState(Array(works.length).fill(false));
 
+    const {
+        spanWithIcon,
+        flexRow,
+        container,
+        linkButton,
+        expandRow,
+        expandedDiv,
+        filterBarStyle,
+    } = useStyles();
+
     const handleClick = (index) => {
         const newExpanded = [...expanded];
         newExpanded[index] = !newExpanded[index];
@@ -132,6 +144,16 @@ const WorkList = ({ works, filter }) => {
 };
 
 const FilterBar = ({ filter, setFilter }) => {
+    const {
+        spanWithIcon,
+        flexRow,
+        container,
+        linkButton,
+        expandRow,
+        expandedDiv,
+        filterBarStyle,
+    } = useStyles();
+
     const handleSearchChange = (event) => {
         setFilter({ ...filter, search: event.target.value });
     };
@@ -157,6 +179,9 @@ const FilterBar = ({ filter, setFilter }) => {
                     placeholder='Search'
                     value={filter.search}
                     onChange={handleSearchChange}
+                    style={{
+                        backgroundColor: "transparent",
+                    }}
                 />
             </span>
             <div

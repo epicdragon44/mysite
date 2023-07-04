@@ -1,8 +1,9 @@
-import Image from "next/image";
 import { useMemo } from "react";
 import pathnames from "../data/consts/routes";
-import styles from "../data/styles/styles";
+import useStyles from "../data/styles/styles";
 import CustomLink from "./link";
+import { useTheme } from "nextra-theme-blog";
+import Logo from "./logo";
 
 /**
  * Renders a static navigation bar.
@@ -11,7 +12,9 @@ import CustomLink from "./link";
  * @returns
  */
 const navbar = (props) => {
-    const { containerStyle, navStyle } = styles;
+    const { containerStyle, navStyle } = useStyles();
+
+    const { theme } = useTheme();
 
     const links = useMemo(
         () =>
@@ -30,11 +33,7 @@ const navbar = (props) => {
         <nav style={navStyle}>
             <div style={containerStyle}>
                 <a href='/'>
-                    <Image
-                        src='/logo.svg'
-                        alt='logo'
-                        width={72}
-                        height={24}
+                    <Logo
                         style={{
                             margin: "0",
                             padding: "0",
