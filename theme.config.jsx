@@ -2,6 +2,11 @@ export default {
     footer: null,
     head: ({ title, meta }) => (
         <>
+            <script
+                defer
+                data-domain='danielwei.me'
+                src='https://plausible.io/js/script.js'
+            />
             {meta.description && (
                 <meta name='description' content={meta.description} />
             )}
