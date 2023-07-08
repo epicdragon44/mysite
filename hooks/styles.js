@@ -11,6 +11,7 @@ const useStyles = () => {
         position: "absolute",
         left: "0",
         right: "0",
+        zIndex: "20",
     };
 
     const navStyle = {

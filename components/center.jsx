@@ -14,6 +14,7 @@ const CenterSplash = () => (
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            zIndex: "0",
         }}
     >
         <div
