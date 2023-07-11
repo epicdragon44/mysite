@@ -1,5 +1,11 @@
 const posts = [
     {
+        name: "30 Days of Design",
+        link: "/blog/30days",
+        year: 2023,
+        descr: "A Daily UI Challenge",
+    },
+    {
         name: "Hong Kong & Seoul",
         link: "/blog/asia",
         year: 2023,
