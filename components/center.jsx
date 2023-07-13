@@ -39,7 +39,7 @@ const CenterSplash = () => (
                 leading development @{" "}
                 <CustomLink href='https://cornelldti.org' text='cornell dti' />
                 <br />
-                product development @{" "}
+                product engineering @{" "}
                 <CustomLink
                     href='https://www.instapathbio.com/'
                     text='instapath'
