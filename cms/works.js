@@ -20,6 +20,16 @@ const works = [
         link: "https://viewer.instapath.app/",
     },
     {
+        name: "30 Days of UI",
+        year: "2023",
+        company: "Solo",
+        license: "Open Source",
+        descr: "Month-long Daily UI Challenge",
+        tags: ["design"],
+        stack: ["figma"],
+        link: "https://danielwei.me/blog/30days",
+    },
+    {
         name: "Mixes",
         year: "2021",
         company: "INFO 1998: Intro to Digital Product Design",

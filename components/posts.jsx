@@ -12,7 +12,7 @@ const Posts = () => {
                     <div
                         key={index}
                         style={{
-                            margin: "0 0 4rem 0",
+                            margin: "0 0 2rem 0",
                             borderLeft: `2px solid ${colors.textPrimary}`,
                             paddingLeft: "2rem",
                             cursor: "pointer",
