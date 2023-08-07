@@ -1,15 +1,197 @@
 # 30 Days of Design
 
-What follows is a collection of my amateur work.
+I resolved to do a month of daily UI challenges. I'm only displaying the top ~10 here, which I'm reasonably happy with.
 
-## Day 1: Logo
+## 404 Page
 
-![Logo](/designs/30days/30days_1.png)
+![404 Page](/designs/30days/30days_5.png)
 
-## Day 2: Credit Card Checkout
+<details>
+    <summary>Notes</summary>
+    Error 404 pages generally just redirect you to the homepage. But what if it could
+    improve your KPIs and be humorous at the same time? Here, I’m imagining a 404
+    page for a hypothetical Duolingo or Rosetta Stone-like Chinese Language Learning
+    service on the web. It’s a running joke among Chinese learners that it’s incredibly
+    hard to write Zero (0) in Chinese. Here, I’m just tapping into that. Some notes:
+    <ul>
+        <li>
+            The calligraphy could be improved (i.e. I would have preferred a
+            brush at least 2pts thicker), but I’m no painter and the online
+            generators are quite limited.
+        </li>
+        <li>
+            The dotted frame behind the Chinese character, for those not in the
+            know, is a mizige, or a training box to help beginners learn how to
+            trace their characters. Befitting of a language learning community.
+        </li>
+        <li>
+            The dotted background box also provides a key design motif elsewhere
+            - in this case, for the “Go Back Home” button.
+        </li>
+        <li>
+            The background color is rice white. I took a photo of some rice
+            under the best lighting conditions I could, and basically picked out
+            a hex code from the resulting photo that looked reasonable.
+        </li>
+        <li>
+            The vibe is very contemporary (grotesque, large font, small body
+            text, barely noticeable colors). If it was used in a real language
+            learning company, it might intimidate users. Here it just works
+            because it gives off a minimalist vibe, so I decided to keep it.
+        </li>
+    </ul>
+</details>
+
+## E-Commerce (Single Item)
+
+![E-Commerce](/designs/30days/30days_7.png)
+
+## Settings
+
+![Settings](/designs/30days/30days_6.png)
+
+<details>
+  <summary>Notes</summary>
+  Summer of 2023, I stayed in an apartment in Downtown Austin, splitting the rent with a close friend. We spent at least ten minutes figuring out one annoying wall-mounted remote, and how it controlled the living room lights. <br />
+  It turns out that the top-most power button controlled whether power flowed to the entire circuit. From there, we could control the fan speed by tapping the middle button 1, 2, 3 times. On the 4th time, the fan would turn off - independently of the rest of the circuit. <br />
+  Similarly, there was a separate “sub-circuit” for the light. Here, there are two separate toggles: the first controlled whether the light was on or off, and the second controlled whether the light was “warm” or “cold”. <br />
+  For this design, I figured I would simply redesign this annoying piece of home equipment. <br />
+
+<br />
+
+Changes I made include:
+
+<ul>
+    <li>
+        The master power button is now more obviously so. I placed it in the top
+        right and made it red, intentionally reminiscent of similar controls on
+        TV remotes.
+    </li>
+    <li>
+        The fan section is clearly delineated, and shows a range between off and
+        high speed. You can skip to any option with one click, instead of
+        repeated ones.
+    </li>
+    <li>
+        Since there’s no use in changing the light warmth when the light is off,
+        we can reduce cognitive load on the user by turning two toggles into
+        three options (i.e. the user won’t have to first turn on the light, and
+        then select the color, but rather simply go from off to the desired
+        color).
+    </li>
+</ul>
+
+<br />
+
+Some design constraints:
+
+<ul>
+    <li>
+        The original design has no text. Early Apple devices were famously
+        universally understandable too. I like that design philosophy, and aimed
+        to achieve the same.
+    </li>
+    <li>
+        I restricted myself to using only the physical components available on
+        the original device: buttons and indicator lights.
+    </li>
+</ul>
+
+<br />
+
+Some notes:
+
+  <ul>
+    <li>
+      I added the little “Assembled in...” tag to the bottom for visual balance.
+    </li>
+    <li>
+      Ranges are vertical, Option Presets are horizontal.
+    </li>
+    <li>
+      The design of the remote itself, as well as of the lighting options, are “squircles,” since that seems to be trendy on Design Twitter.
+    </li>
+    <li>
+      Since the squircly design lends a certain imposition on the physical curvature of the design (obviously bulges in the middle and tapers unevenly on the edges), I had to design shadows and lines around this. You can assume the light source in the image comes from above and overhead.
+    </li>
+    <li>
+      I made the new remote more matte than the original. I would say this is an unequivocal improvement, except I suppose greasy fingers could stain the new design more easily.
+    </li>
+  </ul>
+</details>
+
+## Sign Up Form
+
+![Sign Up](/designs/30days/30days_3.png)
+
+<details>
+    <summary>Notes</summary>A satirical hypothetical design for a world where
+    the New York Times launches their own luxury residential apartment line in
+    Manhattan. Some notes:
+    <ul>
+        <li>
+            Conformance to the usual “New York Times” look and feel, while
+            trying to emphasize the boldness of the business decision that must
+            have led to such a decision (simpler, bolder text inputs as just
+            underlines, for instance, compared to what the NYT usually uses on
+            their sites).
+        </li>
+        <li>
+            Hand-drawn signature doubles as captcha for sign-ups and legally
+            binding (satire).
+        </li>
+        <li>
+            Vaguely biting copy (“for our most loyal readers”, “By signing
+            below...”).
+        </li>
+        <li>
+            Dual purpose (scroll to see example apartments if you’re on the
+            fence). I’m not sure how this would pan out in real life in terms of
+            conversions, but if this hypothetical world’s NYT was using sign-ups
+            as a KPI, I can’t see how this would be detrimental to KPI as long
+            as good representative photos are chosen.
+        </li>
+    </ul>
+</details>
+
+## Profile Card
+
+![Profile Card](/designs/30days/30days_4.png)
+
+## Credit Card Checkout
 
 ![Checkout](/designs/30days/30days_2.png)
 
-## Day 3: Sign Up Form
+<details>
+    <summary>Notes</summary>A checkout page for my imaginary startup, Sailboat.
+    Boring, simple corporate design. The main things of note:
+    <ul>
+        <li>
+            Subtle sailboat shadow in the top right adds a bit more balance to
+            the entire upper region.
+        </li>
+        <li>Using Figma AutoLayout across the entire component.</li>
+    </ul>
+</details>
 
-![Sign Up](/designs/30days/30days_3.png)
+## Logo
+
+![Logo](/designs/30days/30days_1.png)
+
+<details>
+    <summary>Notes</summary>
+    Going for something corporate, simple, Silicon Valley-esque. Settled on this
+    icon, for a hypothetical startup called Sailboat. The icon is vaguely reminiscent
+    of both a Sailboat, and the letter S. Note two things:
+    <ul>
+        <li>
+            Inset shadow gives it a sunken appearance that allows the sailboat
+            to pop out more.{" "}
+        </li>
+        <li>
+            The icon isn’t properly centered, because the center of gravity is a
+            little to the lower left to compensate for the top-heavy
+            “sail”.{" "}
+        </li>
+    </ul>
+</details>

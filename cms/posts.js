@@ -9,13 +9,13 @@ const posts = [
         name: "Hong Kong & Seoul",
         link: "/blog/asia",
         year: 2023,
-        descr: "Amateur photography on a Canon EOS M50 Mk II",
+        descr: "Amateur photography, May 2023",
     },
     {
-        name: "Austin",
-        link: "/blog/austin",
+        name: "The Bay Area",
+        link: "/blog/bay",
         year: 2023,
-        descr: "Amateur photography on a Canon EOS M50 Mk II",
+        descr: "Amateur photography, August 2023",
     },
     {
         name: "Mixes",
