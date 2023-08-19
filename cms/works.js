@@ -47,7 +47,7 @@ const works = [
         descr: "An NFT Marketplace for Influencers and Creatives",
         tags: ["design"],
         stack: ["figma"],
-        link: "https://docs.google.com/presentation/d/1Sq_d0WqInwHX2wj206Hlaiy0j3L07xMHu0oQqDqUrs0/edit?usp=sharing",
+        link: "https://docs.google.com/presentation/d/e/2PACX-1vQ7-7jmIP36tgjivxXjmCM3WuI61dPft-wCGc1H_0dy203rXDto8_wTgcWiijGGRFBxaRwj8SKcoRv2/pub?start=false&loop=false&delayms=5000",
     },
     {
         name: "Fasternet",
