@@ -13,7 +13,7 @@ const Posts = () => {
                         key={index}
                         style={{
                             margin: "0 0 2rem 0",
-                            borderLeft: `2px solid ${colors.textPrimary}`,
+                            borderLeft: `1px solid ${colors.lightgrey}`,
                             paddingLeft: "2rem",
                             cursor: "pointer",
                         }}
@@ -50,7 +50,7 @@ const Posts = () => {
                                     {post.year}
                                 </span>
                             </span>
-                            <ArrowRight />
+                            <ArrowRight color='grey' />
                         </h3>
                         <p
                             style={{

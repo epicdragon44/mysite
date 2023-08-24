@@ -11,6 +11,7 @@ import {
     ArrowRight,
 } from "react-feather";
 import useStyles from "../hooks/styles";
+import Image from "next/image";
 
 const Work = ({ work, expanded, onClick }) => {
     const colors = useColors();
@@ -18,6 +19,7 @@ const Work = ({ work, expanded, onClick }) => {
     const {
         spanWithIcon,
         flexRow,
+        imageWrapper,
         container,
         linkButton,
         expandRow,
@@ -67,6 +69,19 @@ const Work = ({ work, expanded, onClick }) => {
                             <span>{work.license}</span>
                         </span>
                     </div>
+                    <div style={imageWrapper}>
+                        {work.cover && (
+                            <Image
+                                src={work.cover[0]}
+                                height={480}
+                                width={720}
+                                style={{
+                                    borderRadius: "12px",
+                                }}
+                            />
+                        )}
+                    </div>
+
                     <div
                         style={{
                             ...flexRow,

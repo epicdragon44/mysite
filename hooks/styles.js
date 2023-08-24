@@ -59,6 +59,12 @@ const useStyles = () => {
         justifyContent: "space-between",
         flexWrap: "wrap",
     };
+    const imageWrapper = {
+        ...flexRow,
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+    };
     const container = {
         margin: "6px",
         padding: "6px",
@@ -119,6 +125,7 @@ const useStyles = () => {
 
         spanWithIcon,
         flexRow,
+        imageWrapper,
         container,
         linkButton,
         expandRow,
