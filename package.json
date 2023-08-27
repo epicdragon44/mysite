@@ -1,5 +1,6 @@
 {
 	"dependencies": {
+		"@uidotdev/usehooks": "^2.1.1",
 		"next": "^13.4.7",
 		"nextra": "^2.8.0",
 		"nextra-theme-blog": "^2.8.0",

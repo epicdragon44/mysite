@@ -2,6 +2,7 @@ import useStyles from "../hooks/styles";
 import CustomLink from "./link";
 import { useTheme } from "nextra-theme-blog";
 import Logo from "./logo";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 /**
  * Renders a static footer.
@@ -10,6 +11,8 @@ const footbar = () => {
     const { containerStyle, footStyle } = useStyles();
 
     const { theme } = useTheme();
+
+    const { width, height } = useWindowSize();
 
     return (
         <nav style={footStyle}>
@@ -44,6 +47,7 @@ const footbar = () => {
                             margin: "0",
                             padding: "0",
                             transform: "rotate(270deg) translate(32px)",
+                            display: width < 600 ? "none" : "block",
                         }}
                     />
                 </div>

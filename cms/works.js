@@ -18,7 +18,7 @@ const works = [
             "turborepo",
         ],
         cover: ["/demo/luciviewer-1.png"],
-        link: "https://viewer.instapath.app/",
+        link: "/blog/instapath",
     },
     {
         name: "Instapath",
