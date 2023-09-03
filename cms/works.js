@@ -29,6 +29,7 @@ const works = [
         tags: ["design"],
         stack: ["figma"],
         cover: ["/demo/instapath-1.png"],
+        attachShadow: true,
         link: "https://www.figma.com/file/0NwxliYgRFmxMC9956SlFb/Instapath?type=design&node-id=59%3A7&mode=design&t=6GWkoFX6HkJehZey-1",
     },
     {
@@ -49,6 +50,7 @@ const works = [
             "cron",
         ],
         cover: ["/demo/internbot-1.png"],
+        attachShadow: true,
         link: "https://github.com/cornell-dti/internbot",
     },
     {
@@ -71,6 +73,7 @@ const works = [
         tags: ["code"],
         stack: ["openai", "ocaml", "telegram api"],
         cover: ["/demo/bocaml-1.png"],
+        attachShadow: true,
         link: "https://github.com/epicdragon44/g511",
     },
     {
@@ -92,6 +95,7 @@ const works = [
         tags: ["design"],
         stack: ["figma"],
         cover: ["/demo/cask-1.png"],
+        attachShadow: true,
         link: "https://docs.google.com/presentation/d/e/2PACX-1vQ7-7jmIP36tgjivxXjmCM3WuI61dPft-wCGc1H_0dy203rXDto8_wTgcWiijGGRFBxaRwj8SKcoRv2/pub?start=false&loop=false&delayms=5000",
     },
     {
@@ -125,6 +129,7 @@ const works = [
         tags: ["design"],
         stack: ["figma"],
         cover: ["/demo/30days-1.png"],
+        attachShadow: true,
         link: "https://danielwei.me/blog/30days",
     },
     {

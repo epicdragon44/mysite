@@ -71,12 +71,15 @@ const Work = ({ work, expanded, onClick }) => {
                     </div>
                     <div style={imageWrapper}>
                         {work.cover && (
-                            <Image
+                            <img
                                 src={work.cover[0]}
-                                height={480}
-                                width={720}
                                 style={{
                                     borderRadius: "12px",
+                                    maxHeight: "480px",
+                                    maxWidth: "600px",
+                                    boxShadow: work.attachShadow
+                                        ? "0px 10px 40px -16px rgba(0,0,0,0.6)"
+                                        : "",
                                 }}
                             />
                         )}
