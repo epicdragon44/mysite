@@ -35,18 +35,26 @@ const CenterSplash = () => (
                 daniel wei
             </h1>
             <p>
-                developer & (occasional) designer <br />
-                leading development @{" "}
-                <CustomLink href='https://cornelldti.org' text='cornell dti' />
+                developer & designer <br />
+                development lead @{" "}
+                <CustomLink
+                    href='https://cornelldti.org'
+                    text='cornell dti'
+                />{" "}
                 <br />
-                product engineering @{" "}
+                design consultant @{" "}
+                <CustomLink
+                    href='https://www.designconsultingcornell.com/'
+                    text='dcc'
+                />
+                <br />
+                former product engineer @{" "}
                 <CustomLink
                     href='https://www.instapathbio.com/'
                     text='instapath'
                 />{" "}
                 (yc w19) <br />
-                majoring in computer science @ cornell <br />
-                minoring in ui/ux & east asian studies
+                studying cs & ux @ cornell <br />
                 <br />
             </p>
         </div>
