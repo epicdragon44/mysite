@@ -17,12 +17,12 @@ const posts = [
         year: 2023,
         descr: "Amateur photography, August 2023",
     },
-    {
-        name: "Passages",
-        link: "/blog/passages",
-        year: 2022,
-        descr: "Short writings set to music",
-    },
+    // {
+    //     name: "Passages",
+    //     link: "/blog/passages",
+    //     year: 2022,
+    //     descr: "Short writings set to music",
+    // },
     {
         name: "Mixes",
         link: "https://bootcamp.uxdesign.cc/mixing-up-apple-music-ccd070cc0cd5",
