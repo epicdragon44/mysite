@@ -38,17 +38,17 @@ const CenterSplash = () => (
                 design engineer <br />
                 incoming software eng @{" "}
                 <CustomLink href='https://bubble.io/' text='bubble.io' /> <br />
-                fmr. development lead @{" "}
-                <CustomLink
-                    href='https://cornelldti.org'
-                    text='cornell dti'
-                />{" "}
-                <br />
                 design consultant @{" "}
                 <CustomLink
                     href='https://www.designconsultingcornell.com/'
                     text='dcc'
                 />
+                <br />
+                fmr. development lead @{" "}
+                <CustomLink
+                    href='https://cornelldti.org'
+                    text='cornell dti'
+                />{" "}
                 <br />
                 fmr. product engineer @{" "}
                 <CustomLink
