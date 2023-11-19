@@ -35,8 +35,10 @@ const CenterSplash = () => (
                 daniel wei
             </h1>
             <p>
-                developer & designer <br />
-                development lead @{" "}
+                design engineer <br />
+                incoming software eng @{" "}
+                <CustomLink href='https://bubble.io/' text='bubble.io' /> <br />
+                fmr. development lead @{" "}
                 <CustomLink
                     href='https://cornelldti.org'
                     text='cornell dti'
@@ -48,7 +50,7 @@ const CenterSplash = () => (
                     text='dcc'
                 />
                 <br />
-                former product engineer @{" "}
+                fmr. product engineer @{" "}
                 <CustomLink
                     href='https://www.instapathbio.com/'
                     text='instapath'
