@@ -29,6 +29,11 @@ const footbar = () => {
                     newTab={true}
                 />
                 <CustomLink
+                    href='https://twitter.com/fromdanielwei15'
+                    text='x?'
+                    newTab={true}
+                />
+                <CustomLink
                     href='mailto:dlw266@cornell.edu'
                     text='email'
                     newTab={true}

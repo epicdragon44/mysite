@@ -1,33 +1,15 @@
 const posts = [
     {
-        name: "30 Days of Design",
-        link: "/blog/30days",
+        name: "2023 in Photography",
+        link: "/blog/2023photos",
         year: 2023,
-        descr: "A Daily UI Challenge",
+        descr: "Amateur photography",
     },
     {
-        name: "Hong Kong & Seoul",
-        link: "/blog/asia",
-        year: 2023,
-        descr: "Amateur photography, May 2023",
-    },
-    {
-        name: "The Bay Area",
-        link: "/blog/bay",
-        year: 2023,
-        descr: "Amateur photography, August 2023",
-    },
-    // {
-    //     name: "Passages",
-    //     link: "/blog/passages",
-    //     year: 2022,
-    //     descr: "Short writings set to music",
-    // },
-    {
-        name: "Mixes",
-        link: "https://bootcamp.uxdesign.cc/mixing-up-apple-music-ccd070cc0cd5",
-        year: 2021,
-        descr: "Apple Music Case Study, published on UX Collective",
+        name: "Passages",
+        link: "/blog/passages",
+        year: 2022,
+        descr: "Short writings set to music",
     },
 ];
 

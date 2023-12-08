@@ -1,7 +1,5 @@
 import CustomLink from "./link";
 
-// TODO: USE INTER EVERYWHERE
-
 const CenterSplash = () => (
     <div
         style={{
@@ -36,6 +34,7 @@ const CenterSplash = () => (
             </h1>
             <p>
                 design engineer <br />
+                studying cs & ux @ cornell <br />
                 incoming software eng @{" "}
                 <CustomLink href='https://bubble.io/' text='bubble.io' /> <br />
                 design consultant @{" "}
@@ -56,8 +55,6 @@ const CenterSplash = () => (
                     text='instapath'
                 />{" "}
                 (yc w19) <br />
-                studying cs & ux @ cornell <br />
-                <br />
             </p>
         </div>
     </div>
