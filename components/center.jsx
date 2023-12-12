@@ -35,6 +35,9 @@ const CenterSplash = () => (
             <p>
                 design engineer <br />
                 studying cs & ux @ cornell <br />
+                <CustomLink href='https://neo.com/' text='neo' /> scholar
+                finalist
+                <br />
                 incoming software eng @{" "}
                 <CustomLink href='https://bubble.io/' text='bubble.io' /> <br />
                 design consultant @{" "}
