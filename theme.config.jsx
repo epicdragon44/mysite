@@ -5,8 +5,8 @@ export default {
             <script
                 defer
                 data-domain='danielwei.me'
-                src='https://plausible.io/js/script.js'
-            />
+                src='https://wednesdays.ddns.net/js/script.js'
+            ></script>
             {meta.description && (
                 <meta name='description' content={meta.description} />
             )}
