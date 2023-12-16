@@ -1,0 +1,91 @@
+# Upreach
+
+In the Fall of 2023, I worked with a small team of students on [Design Consulting @ Cornell](https://www.designconsultingcornell.com/) to re-imagine the email outreach and sales pipeline experience in the age of AI. Our client: [Upreach.ai](https://upreach.ai/), a New York-based startup that uses AI to help salespeople find and reach out to potential customers.
+
+In particular, I worked on redesigning the flow by which one actually writes an email in the age of AI. How do we integrate AI in email-writing in useful, unobtrusive ways?
+
+## Understand
+
+![1](/assets/diamond/1.png)
+
+### User Research
+
+-   **Users do not have faith in AI systems.**
+
+    The vast majority of users want to carefully monitor and vet AI output at every stage.
+
+-   **Unfamiliar users are intimidated by sales language.**
+
+    Upreach's target customer-base include the relatively inexperienced. Our designs must be intuitive for the uninitiated.
+
+### Client Needs
+
+-   **Have two exit points: output a plain-text email template; or actually send the emails en-masse through Upreach.**
+
+    Upreach's business goals included being a flexible tool that fit into existing sales pipelines, regardless of how they were set up.
+
+-   **Prioritize user progression speed over fine-grained accuracy.**
+
+    The final business goal of Upreach is to develop a fully autonomous AI agent. Until we have a full-confidence unmonitored program, we need to prioritize the speed at which a user can get through the flow!
+
+## Define
+
+![2](/assets/diamond/2.png)
+
+### Resultant Design Insights
+
+-   **Rely on pre-existing mental models where possible.**
+
+    **AI Chats** are now a well-established paradigm of interacting with the capabilities LLMs. With the right prompt, users can work both accurately, and -- most importantly -- quickly; iterating holistically version after version.
+
+    **Templates** are a well-established pattern in the world of mass emails: instead of forcing a user to look through the hundreds of emails they're going to send out and edit each individually, represent them all using one template email with embedded _placeholders_ to represent dynamic content to be filled in later.
+
+-   **Opt-in fine-grained editing.**
+
+    To maximize speed, allow users to choose between continuing with an AI-generated email, or further customizing it in a rich template editor, complete with placeholders. If the latter, make it easy to rejoin the main workflow afterwards.
+
+-   **Enforce Send Transparency.**
+
+    How do we improve user confidence, in order to work towards true unmanned AI systems? Simple: show them the results are perfect.
+
+    When designing, ensure the user gets to see the _exact_ final email that each recipient will be receiving, if emails are sent through the platform. Furthermore, allow for _further_ customization of each indivdiual email on a case-by-case basis, for opt-in full control.
+
+### Solution Spaces
+
+-   **Notion AI-like interface** for innovative, though unfamiliar combined editing & prompting.
+
+-   **Master page design**: integrate reviewing, editing, and sending each individual email directly after generating all of them at once. Potentially confusing, but most 'efficient.'
+
+-   **Step-by-step flow**: AI-chat with clearly defined, though laborious steps for prompting, editing, and sending. But how to incorporate opt-in components?
+
+## Develop & Deliver
+
+![5](/assets/diamond/5.png)
+
+As the end of the semester closed in, we developed a working Figma prototype of the step-by-step flow and did user testing with a wide range of potential users, deriving a set of common problems and then going back to the drawing board. A brief summary of our insights:
+
+![Bad Flow](/designs/upreach/badflow.png)
+
+![Good Flow](/designs/upreach/goodflow.png)
+
+After the revisions, we were able to successfully showcase a final prototype.
+
+![1](/designs/upreach/1.png)
+
+![2](/designs/upreach/2.png)
+
+![3](/designs/upreach/3.png)
+
+![4](/designs/upreach/4.png)
+
+![5](/designs/upreach/5.png)
+
+![6](/designs/upreach/6.png)
+
+![7](/designs/upreach/7.png)
+
+## Figma
+
+Final Showcase Slides, from our Capstone Presentation to clients, available [here](https://www.figma.com/proto/XjqcvIG3NyTbp3uHgF7FRs/Anote%2FSababa-Working-File?page-id=3343%3A8412&type=design&node-id=3880-3643&viewport=1827%2C-3499%2C0.09&t=C71KLs3JuapymAD1-1&scaling=scale-down&starting-point-node-id=3880%3A3643&mode=design).
+
+Prototype for Email Generation Flow available [here](https://www.figma.com/proto/XjqcvIG3NyTbp3uHgF7FRs/Anote%2FSababa-Working-File?page-id=348%3A726&type=design&node-id=2471-6347&viewport=1636%2C-2395%2C0.14&t=36VGF75GhbxOYR5R-1&scaling=min-zoom&starting-point-node-id=2471%3A6347&show-proto-sidebar=1&mode=design).
