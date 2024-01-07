@@ -22,6 +22,7 @@ const CenterSplash = () => (
                 justifyContent: "center",
                 alignItems: "start",
                 gap: "0",
+                padding: "0 2rem",
             }}
         >
             <h1
@@ -39,7 +40,7 @@ const CenterSplash = () => (
                     text='cornell'
                 />{" "}
                 <br />
-                <b>currently</b> a founding design eng @ an{" "}
+                <b>currently</b> founding design eng @ an{" "}
                 <CustomLink href='https://www.joinef.com/' text='EF' />
                 -backed startup
                 <br />
