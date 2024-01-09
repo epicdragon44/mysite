@@ -17,7 +17,11 @@ const footbar = () => {
     return (
         <nav style={footStyle}>
             <div style={containerStyle}>
-                <CustomLink href='/resume' text='resume' newTab={true} />
+                <CustomLink
+                    href='/files/resume.pdf'
+                    text='resume'
+                    newTab={true}
+                />
                 <CustomLink
                     href='https://www.linkedin.com/in/weidaniel15/'
                     text='linkedin'
