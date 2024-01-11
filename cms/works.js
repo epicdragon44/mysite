@@ -112,6 +112,16 @@ const works = [
         link: "https://hyperdt.in/",
     },
     {
+        name: "INFO 1998 Autograder",
+        year: "2023",
+        company: "INFO 1998: Trends in Web Development",
+        license: "Open Source",
+        descr: "Functional, highly concurrent assignment autograder",
+        tags: ["code"],
+        stack: ["typescript", "effect-ts", "bun"],
+        link: "https://github.com/cornell-dti/trends-autograder",
+    },
+    {
         name: "30 Days of UI",
         year: "2023",
         company: "Solo",
