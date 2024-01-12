@@ -14,7 +14,7 @@ const Posts = () => {
                         style={{
                             margin: "0 0 2rem 0",
                             borderLeft: `1px solid ${colors.lightgrey}`,
-                            paddingLeft: "2rem",
+                            paddingLeft: "1.5rem",
                             cursor: "pointer",
                         }}
                         onClick={() =>
@@ -35,27 +35,30 @@ const Posts = () => {
                                 <span
                                     style={{
                                         fontWeight: "500",
-                                        color: colors.textPrimary,
+                                        color: colors.black,
                                     }}
                                 >
                                     {post.name}
-                                </span>
-                                ,{" "}
+                                </span>{" "}
                                 <span
                                     style={{
                                         fontWeight: "300",
-                                        color: colors.textSecondary,
+                                        color: colors.darkgrey,
                                     }}
                                 >
                                     {post.year}
                                 </span>
                             </span>
-                            <ArrowRight color='grey' />
+                            <ArrowRight
+                                style={{
+                                    color: colors.lightgrey,
+                                }}
+                            />
                         </h3>
                         <p
                             style={{
                                 fontWeight: "300",
-                                color: colors.textSecondary,
+                                color: colors.darkgrey,
                             }}
                         >
                             {post.descr}

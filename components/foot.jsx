@@ -1,5 +1,5 @@
 import useStyles from "../hooks/styles";
-import CustomLink from "./link";
+import { ResourceLink } from "./link";
 import { useTheme } from "nextra-theme-blog";
 import Logo from "./logo";
 import { useWindowSize } from "@uidotdev/usehooks";
@@ -17,34 +17,34 @@ const footbar = () => {
     return (
         <nav style={footStyle}>
             <div style={containerStyle}>
-                <CustomLink
+                <ResourceLink
                     href='/files/resume.pdf'
                     text='resume'
                     newTab={true}
                 />
-                <CustomLink
+                <ResourceLink
                     href='https://www.linkedin.com/in/weidaniel15/'
                     text='linkedin'
                     newTab={true}
                 />
-                <CustomLink
+                <ResourceLink
                     href='https://github.com/epicdragon44'
                     text='github'
                     newTab={true}
                 />
-                <CustomLink
+                <ResourceLink
                     href='https://twitter.com/fromdanielwei15'
                     text='x?'
                     newTab={true}
                 />
-                <CustomLink
+                <ResourceLink
                     href='mailto:dlw266@cornell.edu'
                     text='email'
                     newTab={true}
                 />
             </div>
 
-            <div style={containerStyle}>
+            {/* <div style={containerStyle}>
                 <div
                     id='offset'
                     style={{
@@ -60,7 +60,7 @@ const footbar = () => {
                         }}
                     />
                 </div>
-            </div>
+            </div> */}
         </nav>
     );
 };

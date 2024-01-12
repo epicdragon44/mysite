@@ -14,12 +14,46 @@ import Link from "next/link";
 const CustomLink = (props) => {
     const { linkStyle, activeLinkStyle } = useStyles();
 
-    const { href, text, black, key, newTab } = props;
+    const { href, text, black, key, newTab } = props; // black indicates active-ness
 
     return (
         <Link
             href={href}
             style={black ? activeLinkStyle : linkStyle}
+            key={key}
+            target={newTab ? "_blank" : ""}
+        >
+            {text}
+        </Link>
+    );
+};
+
+export const NavLink = (props) => {
+    const { navLinkStyle } = useStyles();
+
+    const { href, text, black, key, newTab } = props; // black indicates active-ness
+
+    return (
+        <Link
+            href={href}
+            style={navLinkStyle(black)}
+            key={key}
+            target={newTab ? "_blank" : ""}
+        >
+            {text}
+        </Link>
+    );
+};
+
+export const ResourceLink = (props) => {
+    const { resourceLinkStyle } = useStyles();
+
+    const { href, text, black, key, newTab } = props; // black indicates active-ness
+
+    return (
+        <Link
+            href={href}
+            style={resourceLinkStyle}
             key={key}
             target={newTab ? "_blank" : ""}
         >

@@ -1,9 +1,20 @@
-/* Define global color variables: black, darkgrey, lightgrey, textPrimary, textSecondary */
+/* Define global color variables: black, darkgrey, lightgrey, black, lightgrey */
 
 :root {
     --black: #000000;
     --darkgrey: #7a7a7a;
     --lightgrey: #aaaaaa;
-    --textPrimary: #000000;
-    --textSecondary: #606060;
+    --black: #000000;
+    --lightgrey: #606060;
+}
+
+.no-scrollbar {
+    /* hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* hide scrollbar for chrome, safari and opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
 }

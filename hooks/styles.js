@@ -1,27 +1,36 @@
 import useColors from "./colors";
+import useBreakpoint from "../hooks/breakpoint";
 
 const useStyles = () => {
     const colors = useColors();
+
+    const { breakpoint, windowSize } = useBreakpoint();
 
     const bar = {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: "32px",
-        position: "absolute",
-        left: "0",
-        right: "0",
+        padding: "16px 0",
+        position: "fixed",
+        // left: "0",
+        // right: "0",
         zIndex: "20",
+        width: windowSize.width <= 800 ? "fit-content" : "650px",
+        gap: "2rem",
+        backgroundColor: colors.white,
     };
 
     const navStyle = {
         ...bar,
         top: "0",
+
+        borderBottom: "1px solid " + colors.lightgrey,
     };
 
     const footStyle = {
         ...bar,
         bottom: "0",
+        borderTop: "1px solid " + colors.lightgrey,
     };
 
     const containerStyle = {
@@ -32,16 +41,36 @@ const useStyles = () => {
     };
 
     const linkStyle = {
-        color: colors.textSecondary,
+        color: colors.lightgrey,
         marginRight: "1px",
         textDecoration: "none",
+        fontWeight: "400",
+        color: colors.accent,
     };
 
     const activeLinkStyle = {
         ...linkStyle,
-        color: colors.textPrimary,
-        textUnderlineOffset: "2px",
-        textDecorationThickness: "1px",
+        color: colors.black,
+    };
+
+    const navLinkStyle = (active) => ({
+        ...linkStyle,
+        color: colors.darkgrey,
+        fontWeight: "300",
+        ...(active
+            ? {
+                  ...activeLinkStyle,
+                  color: colors.black,
+                  fontWeight: "500",
+              }
+            : {}),
+    });
+
+    const resourceLinkStyle = {
+        ...linkStyle,
+        color: colors.darkgrey,
+        marginRight: "0",
+        fontWeight: "500",
     };
 
     const spanWithIcon = {
@@ -58,6 +87,7 @@ const useStyles = () => {
         flexDirection: "row",
         justifyContent: "space-between",
         flexWrap: "wrap",
+        alignItems: "center",
     };
     const imageWrapper = {
         ...flexRow,
@@ -73,7 +103,7 @@ const useStyles = () => {
     };
     const linkButton = {
         ...spanWithIcon,
-        color: colors.textSecondary,
+        color: colors.black,
         textDecoration: "none",
         marginRight: "0",
         fontWeight: "500",
@@ -85,7 +115,7 @@ const useStyles = () => {
     };
     const expandedDiv = {
         padding: "8px",
-        color: colors.textSecondary,
+        color: colors.darkgrey,
         fontWeight: "300",
     };
 
@@ -101,16 +131,17 @@ const useStyles = () => {
         },
         labelInactive: {
             cursor: "pointer",
-            padding: "8px 16px",
+            padding: "4px 16px",
             borderRadius: "64px",
-            fontSize: "16px",
-            color: colors.textSecondary,
+            fontSize: "12px",
+            color: colors.black,
+            backgroundColor: colors.lightgrey,
         },
         labelActive: {
             cursor: "pointer",
-            padding: "8px 16px",
+            padding: "4px 16px",
             borderRadius: "64px",
-            fontSize: "16px",
+            fontSize: "12px",
             color: colors.white,
             backgroundColor: colors.black,
         },
@@ -122,6 +153,8 @@ const useStyles = () => {
         linkStyle,
         activeLinkStyle,
         footStyle,
+        navLinkStyle,
+        resourceLinkStyle,
 
         spanWithIcon,
         flexRow,

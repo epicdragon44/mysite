@@ -11,7 +11,6 @@ import {
     ArrowRight,
 } from "react-feather";
 import useStyles from "../hooks/styles";
-import Image from "next/image";
 
 const Work = ({ work, expanded, onClick }) => {
     const colors = useColors();
@@ -33,7 +32,7 @@ const Work = ({ work, expanded, onClick }) => {
                 <span
                     style={{
                         fontWeight: "500",
-                        color: colors.textPrimary,
+                        color: colors.black,
                     }}
                 >
                     {work.name}
@@ -41,7 +40,7 @@ const Work = ({ work, expanded, onClick }) => {
                 <span
                     style={{
                         fontWeight: "300",
-                        color: colors.textSecondary,
+                        color: colors.darkgrey,
                     }}
                 >
                     {work.descr}
@@ -110,16 +109,6 @@ const Work = ({ work, expanded, onClick }) => {
 const WorkList = ({ works, filter }) => {
     const [expanded, setExpanded] = useState(Array(works.length).fill(false));
 
-    const {
-        spanWithIcon,
-        flexRow,
-        container,
-        linkButton,
-        expandRow,
-        expandedDiv,
-        filterBarStyle,
-    } = useStyles();
-
     const handleClick = (index) => {
         const newExpanded = [...expanded];
         newExpanded[index] = !newExpanded[index];
@@ -135,17 +124,14 @@ const WorkList = ({ works, filter }) => {
                         .includes(filter.search.toLowerCase()) ||
                     work.descr
                         .toLowerCase()
-                        .includes(filter.search.toLowerCase()) ||
-                    work.stack.some((tag) =>
-                        tag.toLowerCase().includes(filter.search.toLowerCase())
-                    )
+                        .includes(filter.search.toLowerCase())
                 );
             }
             return true;
         })
         .filter((work) => {
-            if (filter.tags.length) {
-                return work.tags.some((tag) => filter.tags.includes(tag));
+            if (filter.stack.length) {
+                return work.stack.some((tech) => filter.stack.includes(tech));
             }
             return true;
         });
@@ -164,7 +150,7 @@ const WorkList = ({ works, filter }) => {
     );
 };
 
-const FilterBar = ({ filter, setFilter }) => {
+const FilterBar = ({ stack, filter, setFilter }) => {
     const {
         spanWithIcon,
         flexRow,
@@ -179,104 +165,97 @@ const FilterBar = ({ filter, setFilter }) => {
         setFilter({ ...filter, search: event.target.value });
     };
 
-    const handleTagChange = (event) => {
-        const tags = filter.tags.includes(event.target.value)
-            ? filter.tags.filter((tag) => tag !== event.target.value)
-            : [...filter.tags, event.target.value];
-        setFilter({ ...filter, tags });
+    const handleStackChange = (tech) => {
+        const stack = filter.stack.includes(tech)
+            ? filter.stack.filter((ea) => ea !== tech)
+            : [...filter.stack, tech];
+        setFilter({ ...filter, stack });
     };
 
     return (
-        <div style={filterBarStyle.container}>
-            <span
-                style={{
-                    ...spanWithIcon,
-                    gap: "12px",
-                }}
-            >
-                <Search size={20} />
-                <input
-                    type='text'
-                    placeholder='Search'
-                    value={filter.search}
-                    onChange={handleSearchChange}
+        <>
+            <div style={filterBarStyle.container}>
+                <span
                     style={{
-                        backgroundColor: "transparent",
+                        ...spanWithIcon,
+                        gap: "12px",
+                        width: "100%",
+                        marginLeft: "4px",
                     }}
-                />
-            </span>
-            <div
-                style={{
-                    ...flexRow,
-                    gap: "12px",
-                }}
-            >
-                <span style={flexRow}>
+                >
+                    <Search size={20} />
                     <input
-                        id='design-check'
-                        type='checkbox'
-                        value='design'
-                        style={filterBarStyle.checkbox}
-                        checked={filter.tags.includes("design")}
-                        onChange={handleTagChange}
+                        type='text'
+                        placeholder='Search'
+                        value={filter.search}
+                        onChange={handleSearchChange}
+                        style={{
+                            backgroundColor: "transparent",
+                            width: "100%",
+                        }}
                     />
-                    <label
-                        for='design-check'
-                        style={
-                            filter.tags.includes("design")
-                                ? filterBarStyle.labelActive
-                                : filterBarStyle.labelInactive
-                        }
-                    >
-                        <span style={spanWithIcon}>
-                            <span>Design</span>
-                            <PenTool size={16} />
-                        </span>
-                    </label>
-                </span>
-                <span style={flexRow}>
-                    <input
-                        id='code-check'
-                        type='checkbox'
-                        value='code'
-                        style={filterBarStyle.checkbox}
-                        checked={filter.tags.includes("code")}
-                        onChange={handleTagChange}
-                    />
-                    <label
-                        for='code-check'
-                        style={
-                            filter.tags.includes("code")
-                                ? filterBarStyle.labelActive
-                                : filterBarStyle.labelInactive
-                        }
-                    >
-                        <span style={spanWithIcon}>
-                            <span>Code</span>
-                            <Code size={16} />
-                        </span>
-                    </label>
                 </span>
             </div>
-        </div>
+            <div
+                className='no-scrollbar'
+                style={{
+                    ...flexRow,
+                    gap: "4px",
+                    margin: "0 12px 0 12px",
+                    justifyContent: "flex-start",
+                    maxWidth: "100%",
+                    height: "30px",
+                    overflowX: "scroll",
+                    flexWrap: "nowrap",
+                    scrollbarWidth: "none",
+                }}
+            >
+                {stack.map((tech) => (
+                    <label
+                        key={tech}
+                        onClick={() => handleStackChange(tech)}
+                        for='design-check'
+                        style={{
+                            ...(filter.stack.includes(tech)
+                                ? filterBarStyle.labelActive
+                                : filterBarStyle.labelInactive),
+                            width: "fit-content",
+                            whiteSpace: "nowrap",
+                        }}
+                    >
+                        <span style={spanWithIcon}>
+                            <span>{tech}</span>
+                        </span>
+                    </label>
+                ))}
+            </div>
+        </>
     );
 };
 
-const PortfolioIndex = () => {
+const DevPortfolio = () => {
     const [filter, setFilter] = useState({
         search: "",
-        tags: [],
+        stack: [],
     });
 
-    // Sort works by year, descending
-    const sortedWorks = [...works].sort((a, b) => b.year - a.year);
+    // Sort all code-related works by year, descending
+    const sortedWorks = [...works]
+        .filter((work) => work.tags.includes("code"))
+        .sort((a, b) => b.year - a.year);
+
+    const allStacks = [...sortedWorks].flatMap((work) => work.stack);
 
     return (
         <div>
-            <FilterBar filter={filter} setFilter={setFilter} />
+            <FilterBar
+                stack={allStacks}
+                filter={filter}
+                setFilter={setFilter}
+            />
             <WorkList works={sortedWorks} filter={filter} />
         </div>
     );
 };
 
-export default PortfolioIndex;
+export default DevPortfolio;
