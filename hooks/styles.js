@@ -68,9 +68,9 @@ const useStyles = () => {
 
     const resourceLinkStyle = {
         ...linkStyle,
-        color: colors.darkgrey,
+        color: colors.black,
         marginRight: "0",
-        fontWeight: "500",
+        fontWeight: "400",
     };
 
     const spanWithIcon = {

@@ -134,17 +134,6 @@ const works = [
         link: "https://danielwei.me/blog/30days",
     },
     {
-        name: "Personal Website",
-        year: "2023",
-        company: "Solo",
-        license: "Open Source",
-        descr: "This Site",
-        tags: ["code"],
-        stack: ["mdx", "nextra", "turborepo", "html", "css", "javascript"],
-        cover: ["/demo/website-1.png"],
-        link: "https://www.danielwei.me/",
-    },
-    {
         name: "Senmonni",
         year: "2020",
         company: "Tecmend LLC",

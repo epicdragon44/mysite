@@ -3,6 +3,7 @@ import { ResourceLink } from "./link";
 import { useTheme } from "nextra-theme-blog";
 import Logo from "./logo";
 import { useWindowSize } from "@uidotdev/usehooks";
+import useColors from "../hooks/colors";
 
 /**
  * Renders a static footer.
@@ -10,9 +11,7 @@ import { useWindowSize } from "@uidotdev/usehooks";
 const footbar = () => {
     const { containerStyle, footStyle } = useStyles();
 
-    const { theme } = useTheme();
-
-    const { width, height } = useWindowSize();
+    const colors = useColors();
 
     return (
         <nav style={footStyle}>
@@ -44,23 +43,14 @@ const footbar = () => {
                 />
             </div>
 
-            {/* <div style={containerStyle}>
-                <div
-                    id='offset'
-                    style={{
-                        marginRight: "-18px",
-                    }}
-                >
-                    <Logo
-                        style={{
-                            margin: "0",
-                            padding: "0",
-                            transform: "rotate(270deg) translate(32px)",
-                            display: width < 600 ? "none" : "block",
-                        }}
-                    />
-                </div>
-            </div> */}
+            <div
+                style={{
+                    fontWeight: "300",
+                    color: colors.darkgrey,
+                }}
+            >
+                © Daniel Wei, 2024
+            </div>
         </nav>
     );
 };
