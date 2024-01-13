@@ -18,7 +18,7 @@ const DesignPortfolio = () => {
     // Sort all design-related works by year, descending
     const sortedWorks = [...works]
         .filter((work) => work.tags.includes("design"))
-        .sort((a, b) => b.year - a.year);
+        .sort((a, b) => a.rank - b.rank);
 
     return (
         <div
