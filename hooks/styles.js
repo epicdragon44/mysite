@@ -56,7 +56,7 @@ const useStyles = () => {
     const navLinkStyle = (active) => ({
         ...linkStyle,
         color: colors.darkgrey,
-        fontWeight: "300",
+        fontWeight: "400",
         ...(active
             ? {
                   ...activeLinkStyle,
@@ -70,7 +70,7 @@ const useStyles = () => {
         ...linkStyle,
         color: colors.black,
         marginRight: "0",
-        fontWeight: "300",
+        fontWeight: "400",
     };
 
     const spanWithIcon = {

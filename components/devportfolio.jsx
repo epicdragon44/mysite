@@ -73,7 +73,6 @@ const Work = ({ work, expanded, onClick }) => {
                             <img
                                 src={work.cover[0]}
                                 style={{
-                                    borderRadius: "8px",
                                     maxHeight: "480px",
                                     maxWidth: "600px",
                                     boxShadow:

@@ -24,7 +24,7 @@ const works = [
         year: "2023",
         tags: ["design"],
         cover: ["/demo/design/instapath.png"],
-        link: "https://www.figma.com/file/0NwxliYgRFmxMC9956SlFb/Instapath?type=design&node-id=59%3A7&mode=design&t=6GWkoFX6HkJehZey-1",
+        link: "/internal/instapath",
         rank: 4,
     },
     {
@@ -32,7 +32,7 @@ const works = [
         year: "2023",
         tags: ["design"],
         cover: ["/demo/design/upreach.png"],
-        link: "/blog/upreachclient -- TODO",
+        link: "/internal/upreachclient",
         rank: 1,
     },
     {
