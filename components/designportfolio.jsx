@@ -25,9 +25,6 @@ const DesignPortfolio = () => {
             style={{
                 display: "flex",
                 flexDirection: "column",
-                gap: "1rem",
-                marginLeft: "1rem",
-                marginRight: "1rem",
             }}
         >
             {sortedWorks.map((work, index) => (

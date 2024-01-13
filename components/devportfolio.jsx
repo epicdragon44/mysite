@@ -246,13 +246,7 @@ const DevPortfolio = () => {
     const allStacks = [...sortedWorks].flatMap((work) => work.stack);
 
     return (
-        <div
-            style={{
-                marginTop: "2rem",
-                marginLeft: "1rem",
-                marginRight: "1rem",
-            }}
-        >
+        <div>
             <FilterBar
                 stack={allStacks}
                 filter={filter}
