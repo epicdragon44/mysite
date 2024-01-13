@@ -73,12 +73,11 @@ const Work = ({ work, expanded, onClick }) => {
                             <img
                                 src={work.cover[0]}
                                 style={{
-                                    borderRadius: "12px",
+                                    borderRadius: "8px",
                                     maxHeight: "480px",
                                     maxWidth: "600px",
-                                    boxShadow: work.attachShadow
-                                        ? "0px 10px 40px -16px rgba(0,0,0,0.6)"
-                                        : "",
+                                    boxShadow:
+                                        "0 0 0 1px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.1)",
                                 }}
                             />
                         )}
