@@ -10,7 +10,7 @@ const useStyles = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: "16px 0",
+        padding: "16px 0 16px 0",
         position: "fixed",
         // left: "0",
         // right: "0",
@@ -23,7 +23,6 @@ const useStyles = () => {
     const navStyle = {
         ...bar,
         top: "0",
-
         borderBottom: "1px solid " + colors.lightgrey,
     };
 
@@ -31,6 +30,7 @@ const useStyles = () => {
         ...bar,
         bottom: "0",
         borderTop: "1px solid " + colors.lightgrey,
+        paddingRight: "4rem",
     };
 
     const containerStyle = {
@@ -70,7 +70,7 @@ const useStyles = () => {
         ...linkStyle,
         color: colors.black,
         marginRight: "0",
-        fontWeight: "400",
+        fontWeight: "300",
     };
 
     const spanWithIcon = {

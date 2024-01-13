@@ -5,7 +5,7 @@ const works = [
         company: "Instapath",
         license: "Proprietary",
         descr: "Low-latency, AI-powered deep-zoom viewer for tissue scans",
-        tags: ["design", "code"],
+        tags: ["code"],
         stack: [
             "react.js",
             "next.js",
@@ -120,18 +120,6 @@ const works = [
         tags: ["code"],
         stack: ["typescript", "effect-ts", "bun"],
         link: "https://github.com/cornell-dti/trends-autograder",
-    },
-    {
-        name: "30 Days of UI",
-        year: "2023",
-        company: "Solo",
-        license: "Open Source",
-        descr: "Month-long Daily UI Challenge",
-        tags: ["design"],
-        stack: ["figma"],
-        cover: ["/demo/30days-1.png"],
-        attachShadow: true,
-        link: "https://danielwei.me/blog/30days",
     },
     {
         name: "Senmonni",

@@ -12,10 +12,10 @@ const Posts = () => {
                     <div
                         key={index}
                         style={{
-                            margin: "0 0 2rem 0",
-                            borderLeft: `1px solid ${colors.lightgrey}`,
-                            paddingLeft: "1.5rem",
+                            margin: "0 0 0 0",
+                            padding: "2rem 0 2rem 0",
                             cursor: "pointer",
+                            borderBottom: `0.5px solid ${colors.lightgrey}`,
                         }}
                         onClick={() =>
                             post.link.charAt(0) === "/"
@@ -29,6 +29,7 @@ const Posts = () => {
                                 alignItems: "center",
                                 justifyContent: "space-between",
                                 flexDirection: "row",
+                                margin: "0 0 0 0",
                             }}
                         >
                             <span>
@@ -59,6 +60,7 @@ const Posts = () => {
                             style={{
                                 fontWeight: "300",
                                 color: colors.darkgrey,
+                                margin: "0 0 0 0",
                             }}
                         >
                             {post.descr}

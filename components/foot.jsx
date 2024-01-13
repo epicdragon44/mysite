@@ -33,7 +33,7 @@ const footbar = () => {
                 />
                 <ResourceLink
                     href='https://twitter.com/fromdanielwei15'
-                    text='x?'
+                    text='x'
                     newTab={true}
                 />
                 <ResourceLink
@@ -41,15 +41,6 @@ const footbar = () => {
                     text='email'
                     newTab={true}
                 />
-            </div>
-
-            <div
-                style={{
-                    fontWeight: "300",
-                    color: colors.darkgrey,
-                }}
-            >
-                © Daniel Wei, 2024
             </div>
         </nav>
     );
