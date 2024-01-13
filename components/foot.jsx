@@ -1,6 +1,5 @@
 import useStyles from "../hooks/styles";
 import { ResourceLink } from "./link";
-import { useTheme } from "nextra-theme-blog";
 import Logo from "./logo";
 import { useWindowSize } from "@uidotdev/usehooks";
 import useColors from "../hooks/colors";

@@ -4,10 +4,8 @@ import { useMemo } from "react";
 import pathnames from "../consts/routes";
 import useStyles from "../hooks/styles";
 import { NavLink } from "./link";
-import { useTheme } from "nextra-theme-blog";
 import Logo from "./logo";
 import { useEffect, useState } from "react";
-import DarkModeSwitcher from "./dark";
 
 /**
  * Renders a static navigation bar.
@@ -44,10 +42,7 @@ const navbar = (props) => {
                 </a>
             </div>
 
-            <div style={containerStyle}>
-                {links}
-                {/* <DarkModeSwitcher /> */}
-            </div>
+            <div style={containerStyle}>{links}</div>
         </nav>
     );
 };
