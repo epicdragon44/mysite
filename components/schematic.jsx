@@ -9,18 +9,19 @@ import { useTheme } from "next-themes";
  *   props.style : any -- object with inline styles
  * @returns
  */
-const Logo = (props) => {
+const Schematic = (props) => {
     const { resolvedTheme, theme, setTheme } = useTheme();
 
     return (
-        <Image
-            src={resolvedTheme === "dark" ? `/logo-dark.svg` : `/logo.svg`}
-            alt='logo'
-            width={72}
-            height={24}
-            style={props.style}
+        <img
+            src={
+                resolvedTheme === "dark"
+                    ? `/assets/schematics/all-dark.png`
+                    : `/assets/schematics/all.png`
+            }
+            alt='schematic'
         />
     );
 };
 
-export default Logo;
+export default Schematic;

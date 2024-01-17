@@ -1,7 +1,10 @@
 import useColors from "./colors";
 import useBreakpoint from "../hooks/breakpoint";
+import { useTheme } from "next-themes";
 
 const useStyles = () => {
+    const { resolvedTheme, theme, setTheme } = useTheme();
+
     const colors = useColors();
 
     const { breakpoint, windowSize } = useBreakpoint();
@@ -134,7 +137,7 @@ const useStyles = () => {
             padding: "4px 16px",
             borderRadius: "64px",
             fontSize: "12px",
-            color: colors.black,
+            color: resolvedTheme === "dark" ? colors.white : colors.black,
             backgroundColor: colors.lightgrey,
         },
         labelActive: {
