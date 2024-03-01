@@ -1,0 +1,136 @@
+# Cursor - A 24-hour Case Study
+
+TODO: ADD IMAGES EVERYWHERE
+
+[Cursor](https://cursor.sh/) is an AI-powered code editor, powered by recent stunning advances in LLM research under the hood. Unlike its primary competitor, Visual Studio Code (VSCode), it aims to naturally introduce AI into the UI naturally and seamlessly in a way that enables the faster development of code through the augmentation of existing workflows.
+
+**Today, my mission: to conduct a one-day design case study, evaluation and exploration on Cursor**.
+
+## Initial Review
+
+**LATE MORNING**: I get up at 10:30AM, make a lazy breakfast (boiled two eggs and poured myself a bowl of cereal), and then opened the laptop. Browsed Tech Twitter reviews of Cursor for a while before opening the app and playing around with it with fresh eyes.
+
+At first glance, the existing product design is:
+
+-   Keyboard-centric
+-   Explicit, not implicit
+-   Information-dense
+-   Targeted towards power users.
+-   Aimed at current VSCode users.
+
+If I had to identify a design manifesto that the existing product fulfills, it would be [@berkeleygfx](https://berkeleygraphics.com/)'s industrial commandments. We're designing a power tool here, not a 'traditional' digital product.
+
+Thus, Cursor inherits both the quirks, power, and existing user flows and mental models of VSCode -- for better or for worse.
+
+## Demographic Review
+
+The existing consumer base can be described as: power users, with a keen eye for the pros and cons of new technology adoption, of whom a larger-than-usual sector interacts with computers primarily through a keyboard-driven approach. Due to selection bias processes, it is likely that the average Cursor user is even more of an early-adopter and power-user than even the average VSCode user.
+
+## Defining Success
+
+Let's define a few metrics of success to get started:
+
+-   At a high level, the aim of Cursor is to enable humans to achieve more, faster, than ever possible before.
+-   At a lower level, Cursor hopes to naturally and intuitively integrate AI-powered capabilities that augment and speed up programmer productivity.
+
+How do we measure how well we're accomplishing these goals?
+
+-   **[QUALITATIVELY]**: do users find the workflow intuitive? How easy (or hard) was it to adopt a Cursor-specific coding style?
+-   **[QUANTITATIVELY]**: how long does it take the user to accomplish certain aims, especially relative to in VSCode?
+
+Of course, we have additional business aims:
+
+-   **[QUALITATIVELY]**: delightfulness of user experience
+
+    Many studies point to the significant association between the 'joy' of using a product and its virality. As a heavily B2C product, Cursor relies heavily on word-of-mouth -- of which it has a strong foundation in the tech community already.
+
+-   **[QUANTITATIVELY]**: conversions into paid users
+
+    How do we, and at what rate, can we convert free users into paid users?
+
+---
+
+## User research
+
+**EARLY AFTERNOON**: Based on the initial review above, I developed a design & usability interview protocol, reached out to a close network of developers, and conducted a series of interviews. I lunched between interviews on a fantastic bowl of ramen, swapping out the provided soup base with something a little more custom (and hopefully healthy).
+
+### The Engineer
+
+**AGE**: 20+
+**CAREER**: Software Engineer / ML Engineer
+**EDUCATION**: High Level
+**TRAITS**: Technological early adopter. High agency worker. Power user.
+**PLATFORM**: Fairly equal split between Windows, Mac, and Linux.
+**INTERACTION STYLE**: Has a few go-to keyboard shortcuts for quick access, but neither a fully graphical nor keyboard-driven interaction style.
+
+With more time, all demographic details can be verified based on statistics, but we'll work with this for now going forward.
+
+_NOTE_: It's worth noting the power of selection biases at work here: from within the VSCode community (already a fairly strong demographic), only the most high-agency are likely to make the switch to Cursor.
+
+### Observations
+
+Let's split this up by section.
+
+**LANDING PAGE**
+
+To _The Engineer_, it's unclear what the unique value proposition offered by Cursor is over Github Copilot or even the ChatGPT website. For instance, it is not immediately clear that unlike the other two, Cursor can digest and understand code within the context of an entire codebase.
+
+Specific feature-wise, _Chat with AI about Cursor_ struck _all_ interviewees as a cheap gimmick. Not one touched it.
+
+**SETUP AND ONBOARDING**
+
+-   The option to install the CLI tool that enables for flows such as `cursor <folder name>` into the command line was confusing, even to engineers that had already previously set up `code`.
+
+-   The onboarding project was a turn-off. It seemed to strike many engineers as fundamentally _lazy_ -- one even went so far as to be insulted by the use of `CMD` throughout the onboarding project, even when they were on Windows. Half the engineers did not seem to have read the provided `README.md` at all. Furthermore, the remaining half expressed confusion on whether they would be able to return to the onboarding page, and then proceeded to promptly forget what they had just read after exiting. No engineer spent more than a minute or so in onboarding.
+
+**FLOWS INHERITED FROM VSCODE OR COPILOT**
+
+-   _AI_: Users liked to wait for autocomplete, Copilot style. If no autocompletions appeared, there tended to be some level of frustration. No one used Copilot chat (it seemed mostly because of lack of codebase context).
+-   _Built-in debugger/runner_: No users used the built-in debugger or code runner -- all interactions happened through the integrated terminal.
+-   _File navigation_: Users tended to waste substantial amounts of time searching for files in the sidebar. Few used the Palette to jump to files. Some would even use the Global Find & Replace tool to find parts of files just to jump to that file.
+-   _Find and Replace_: Users tended to not trust Replace All. Most users evaluated each replacement on its own individual merits, one at a time. Refactoring a large codebase would take a significant amount of time.
+-   _Code Digestion_: Users, especially those new to a codebase, often seemed to aim to gain both localized and holistic understandings of the codebase. For instance, if working on one specific feature, they would _Cmd+Click_ their way through symbol definitions and files until they had a detailed understanding of how functions and files worked; at a high level, they would explore the project file structure and read the `README.md`, going from entry point to entry point until they knew how parts fit together. This flow, while very customary, also presents potential for improvement under Cursor.
+
+**CURSOR-SPECIFIC FLOWS**
+
+-   _Entry Points_: keyboard shortcuts learned during onboarding are quickly forgotten and otherwise invisible. Fine-print text everywhere is more or less invisible to users (about 70% of interviewees never even saw them). There is no way to discover the breadth of all Cursor-powered capabilities - one is left with a general sense that they may not be utilizing the platform to its full potential. Not a single interviewee has ever noticed the top-right layout buttons, and more than one was stumped as to how to collapse the sidebar. Some users didn't even realize which features were AI-powered and which weren't, since there was no indication in an otherwise explicit design system.
+-   _Customizability_: users coming from VSCode may be used to using the left and right panels interchangeably. One interviewee in particular pointed out that some programmers moved the entire left panel to the right to avoid changing the left-aligned baseline of coding text when toggling the file nav panel. Another interviewee pointed out that they had a massive number of frequently used extensions along the sidebar in VSCode, and couldn't fathom why icons were moved to the top in Cursor. Most resigned themselves to what they believed was simply an inferior and un-customizable layout.
+-   _In-Terminal AI_: even if no explicit error was outputted in the terminal, users wishes for ways to debug the output. Users also expressed an interest in digesting terminal output in more human-readable ways, and, without reading the fine-text, also verbally wished for AI-powered autocomplete and natural language prompting that Cursor already has. Additionally, for multi-line actions like `git rebase`, users expressed an interest in encapsulating and automating that as one natural human language expression, or a human-readable guided experience.
+-   _Chat Panel_: most users never discovered `Cmd+Enter` to chat with the context of the codebase. Some users expressed a desire for this to be the default behavior. Underlying revealed desire: smarter inclusion or exclusion of context as a decision made automatically on the user's behalf.
+-   _Inline Editing_: some users never discovered this capability.
+-   _Code Generation_: users expressed a distrust of AI systems to write entire blocks of code correctly, and thus expressed a desire to slow down output so they could examine each line of code as it is generated. The underlying revealed desire: we need a greater level of human-readable transparency into AI-generated code, and a proactive catching of issues, bugs, and contextual effects by the AI, of the AI.
+-   _Intuitive Configuration_: for cases in which users wanted to know if they could change the editor settings, setup WSL, or similar common flows, an AI-powered settings changer could automatically improve their experience.
+
+That's a lot. Let's consolidate.
+
+### Affinity Diagram
+
+<img src='/designs/cursor/affinity1.png' alt='Affinity Diagram' width='500' />
+
+### Takeaways, Insights, and Solution Spaces
+
+At a high level, _users desire a proactive AI_. AI should interpret what they're doing at all times and surface relevant, human-readable, pre-debugged code and context.
+
+Some more concrete, achievable milestones to get there:
+
+1. _Users desire a natural-language terminal_. Smart error debugging isn't enough. We should be able to understand and interpret terminal output automatically, debug and understand anything, and execute anything in natural language.
+
+2. _Users want global AI-powered action entry points_. How do users know they know everything? How do we surface AI-powered features explicitly and openly? Centralized design motifs and block-by-block graphical entryways are one possibly solution.
+
+3. _Users want to understand codebases, fast._ And what better way than AI? Let's explore opt-in interfaces that melt the code away into human-readable implementation encapsulations under top-level implementations that give users a top-level understanding of the code at a glance. Let's surface relevant context and information for every symbol everywhere, so users don't have to embark on `Cmd+Click` DFS rabbit holes just to get to the bottom of a procedure.
+
+4. _Users want to get to files, fast._ `Cmd+P` is too hidden, and depends on knowing the file name. Find and Replace isn't smart enough. And deep nested folder hierarchies means slow navigation experiences. Let's build a global, natural language, AI-powered file find.
+
+5. _Users want customizability._ Read Linear.app's great blog post about why Settings panels aren't design failures. Now, imagine a natural language editor that responds to your desired layout and configuration in human-readable language.
+
+6. _Users want to know the value prop, now._ Desktop apps are high-commitment experiences, especially compared to web and mobile apps. Let's convince the user Cursor is unique with direct and explicit comparisons to Code and Copilot.
+
+7. _Users want a proper onboarding experience._ Duh.
+
+Each of the 7, if accomplished, would substantively and materially improve every one of our success metrics.
+
+With these 7 key design spaces in mind, let's proceed to the design exploration process!
+
+---
+
+## Redesigned User Flows
