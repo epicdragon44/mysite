@@ -6,10 +6,10 @@ const posts = [
         descr: "Amateur photography",
     },
     {
-        name: "Passages",
-        link: "/blog/passages",
+        name: "Gothic Modernism",
+        link: "/blog/gothic-modernism",
         year: 2022,
-        descr: "Short writings set to music",
+        descr: "A brief passage set to music",
     },
 ];
 
