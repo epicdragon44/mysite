@@ -1,5 +1,24 @@
 const works = [
     {
+        name: "Shmood",
+        year: "2024",
+        company: "Shmood",
+        license: "Proprietary",
+        descr: "Design-client communication platform",
+        tags: ["code", "design"],
+        stack: [
+            "supabase",
+            "typescript",
+            "next.js",
+            "tailwind",
+            "shadcn/ui",
+            "alpine.js",
+            "react.js",
+            "effect-ts",
+            "pnpm",
+        ],
+    },
+    {
         name: "Luciviewer",
         year: "2023",
         company: "Instapath",
